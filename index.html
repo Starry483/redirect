@@ -5,27 +5,29 @@
 <title>Welcome!</title> 
 </head>
 <body>
- <h3>Welcome!</h3>
- <a href="https://ddns.pooh3.us.kg:2096">
- <style>
- .button1 {
- -webkit-transition-duration: 0.4s;
- transition-duration: 0.4s;
- padding: 160px 320px;
- text-align: center;
- font-size: 50px;
- background-color: white;
- color: black;
- border: 20px solid #5DADE2;
- border-radius:50px;
- }
- .button1:hover {
- background-color: #5DADE2;
- color: white;
- }
-  </style>
-  <button class="button1">got it!</button>
+ <h1>Welcome!</h1>
+ <h2>This is a DDNS redirect page.</h2>
+ <script type="text/javascript">    
+　　 function countDown(secs,surl){        
+ 　　　　var jumpTo = document.getElementById('jumpTo');
+ 　　　　jumpTo.innerHTML=secs; 
+ 　　　　if(--secs>0){    
+     　　　　setTimeout("countDown("+secs+",'"+surl+"')",1000);    
+     　　}    
+ 　　　　else{      
+     　　　　location.href=surl;    
+     　　-ma
+     　　}    
+ 　　}    
+</script>
+ <br>
+<h3>Redirect</h3> 
+<a href="https://ddns.pooh3.us.kg:2096/"><span id="jumpTo">3</span>s redirect...</a>
+<script type="text/javascript">
+    countDown(3,'https://ddns.pooh3.us.kg:2096/');
+</script>
  </a>
+ <br>
   <img src="https://count.getloli.com/get/@DDNS?theme=rule34" alt="DDNS" />
  </body>
 </html>

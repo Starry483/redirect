@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html>
-<head> 
-<meta charset="utf-8"> 
-<title>Redirect...</title> 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redirect...</title>
+<script>
+var countdownTime = 10; 
+
+document.addEventListener('DOMContentLoaded', function() {
+    function countdown() {
+        countdownTime--;
+        document.getElementById('countdown').textContent = 'redirect in ' + countdownTime + ' seconds...';
+
+        if (countdownTime <= 0) {
+            window.location.href = 'https://rt.b4.f5.si:2096'; 
+        }
+    }
+
+    setInterval(countdown, 1000);
+});
+</script>
 </head>
 <body>
- <h1>Welcome!</h1>
- <h2>This is a DDNS redirect page.</h2>
- <script type="text/javascript">    
-　　 function countDown(secs,surl){        
- 　　　　var jumpTo = document.getElementById('jumpTo');
- 　　　　jumpTo.innerHTML=secs; 
- 　　　　if(--secs>0){    
-     　　　　setTimeout("countDown("+secs+",'"+surl+"')",1000);    
-     　　}    
- 　　　　else{      
-     　　　　location.href=surl;    
-     　　-ma
-     　　}    
- 　　}    
-</script>
- <a>
- <span id="jumpTo">10</span>s later redirect...</a>
-<script type="text/javascript">
-    countDown(10,'https://rt.b4.f5.si:2096/');
-</script>
-</a>
- <br>
-  <img src="https://count.getloli.com/get/@pooh3?theme=rule34" alt="Moe Counter" />
- </body>
+<h1>Welcome!</h1>
+<h2>This is a DDNS redirect page.</h2>
+<p id="countdown">redirect in 10 seconds...</p>
+<br>
+<img src="https://count.getloli.com/get/@starry483?theme=rule34" alt="Moe Counter!" />
+</body>
 </html>
